@@ -1,0 +1,1 @@
+SELECT *, COUNT(Author1) FROM (SELECT Author1 FROM `book` UNION ALL SELECT Author2 FROM `book` UNION ALL SELECT Author3 FROM `book`) AS T1 GROUP BY T1.Author1 HAVING COUNT(Author1) < 6 AND Author1 != ''
